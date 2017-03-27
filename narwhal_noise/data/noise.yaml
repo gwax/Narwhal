@@ -1,339 +1,314 @@
 klists:
   - name: experience
     keywords:
-      - experience
-      - we found
       - I found
+      - experience
       - we did find
+      - we found
   - name: problem
     keywords:
-      - problem
-      - issue
-      - drawback
-      - not for you
-      - unfortunate
       - disappoint
+      - drawback
+      - issue
+      - not for you
+      - problem
+      - unfortunate
   - name: sound
     keywords:
       - sound
   - name: noise
     keywords:
-      - street sound
-      - noise
-      - nosie
-      - noise level
-      - rampage
-      - noisy
       - "hear # about"
       - "heard # of|from|how|great"
       - "racket # club"
-      - blaring
-      - moan
       - "shout # out"
-      - crying
-      - scream
-      - slamming
-      - slammed
-      - barking
-      - yelling
       - "talking # with|to"
-      - whistling
-      - snoring
-      - roaring
-      - knocking
-      - swearing
-      - footstep
+      - barking
+      - blaring
+      - crying
       - flush
+      - footstep
+      - knocking
+      - moan
+      - noise
+      - noise level
+      - noisy
+      - nosie
+      - rampage
+      - roaring
+      - scream
+      - slammed
+      - slamming
+      - snoring
       - spoken
+      - street sound
+      - swearing
+      - whistling
       - word spoken
+      - yelling
   - name: quiet
     keywords:
-      - soft
-      - low volume
-      - tranquil
+      - birds
+      - frogs
       - good sleep
-      - silent
-      - quiet
       - isolation
-      - rested
-      - soundly
+      - low volume
       - oasis
       - peace
+      - quiet
+      - rested
       - serene
-      - frogs
-      - birds
+      - silent
+      - soft
+      - soundly
+      - tranquil
       - waves
   - name: loud
     keywords:
-      - very noisy
-      - loud
-      - very loud
       # people hate to criticize and use understatement
-      - a bit of
       - a bit
+      - a bit of
       - a little
       - bad
-      - dreadful
-      - loud
       - deafening
       - deafning
+      - dreadful
+      - loud
+      - loud
+      - very loud
+      - very noisy
   - name: soft
     keywords:
-      - soft
       - "low # volume|tide"
-      # I'm too lazy to implement "keep the noise down"
-      - down
+      - down  # I'm too lazy to implement "keep the noise down"
+      - soft
       - very quiet
   - name: people
     keywords:
-      - kitchen
-      - maids
       - "steps # from|away"
-      - people
+      - bustle
+      - couples
+      - dogs
       - fisherman
       - fishermen
-      - our $ group
-      - other guest
-      - other guests
+      - hustle
+      - kids
+      - kitchen
+      - maids
       - neighbors
       - neighbours
-      - kids
-      - teenagers
+      - other guest
+      - other guests
+      - our $ group
+      - people
       - shower
-      - couples
-      - neighbors
-      - dogs
-      - hustle
-      - bustle
       - squeak
+      - teenagers
   - name: party
     keywords:
-      - stadium
-      - party
-      - function
-      - wedding
-      - drunk
+      - bar
       - club
+      - drunk
+      - function
+      - hofbrau
       - mcdonalds
       - music
-      - bar
-      - wine bar
-      - hofbrau
-      - piano player
-      - singer
       - partied
+      - party
+      - piano player
       - revellers
+      - singer
+      - stadium
+      - wedding
+      - wine bar
   - name: equip
     keywords:
+      - a/c
+      - a/c
       - ac
-      - a/c
       - air con
-      - air-con
-      - a/c
-      - aircon
       - air conditioner
       - air conditioning
-      - tv
       - air shaft
-      - drains
-      - hvac
+      - air-con
+      - aircon
       - central heating
-      - lift
-      - elevator
-      - fan
-      - ice
-      - ventilation
-      - equipment
       - clanking
       - clattering
+      - drains
+      - elevator
+      - equipment
+      - fan
+      - hvac
+      - ice
+      - lift
       - rumbling
+      - tv
+      - ventilation
   - name: traffic
     keywords:
-      - truck
-      - traffic
+      - alley
       - busy
       - busy street
-      - shopping
-      - street
-      - main
-      - market
-      - road noise
-      - highway
-      - diesel
-      - road
-      - alley
-      - city
-      - downtown
       - center
       - centre
-      - garage
-      - engine
-      - tram
+      - city
       - deliveries
+      - diesel
+      - downtown
+      - engine
+      - garage
+      - highway
+      - main
+      - market
+      - road
+      - road noise
+      - shopping
+      - street
+      - traffic
+      - tram
+      - truck
   - name: constr
     keywords:
       - banging
-      - pounding
       - construction
-      - remodelling
-      - remodeling
-      - maintenance
-      - machinery
       - hammering
+      - machinery
+      - maintenance
+      - pounding
+      - remodeling
+      - remodelling
   - name: oasis
     keywords:
       - ocean
   - name: room
     keywords:
-      - that
-      - it
-      - our floor
       - "room # for"
+      - above
+      - adjacent room
+      - bathroom
+      - below
+      - corridor
+      - door
+      - hall
+      - hallway
+      - it
+      - my door
       - my room
+      - neighboring roof
+      - next door
+      - next room
+      - next suite
+      - next to
+      - our floor
       - our room
       - outside
-      - door
-      - next to
-      - next door
-      - my door
       - outside my door
-      - adjacent room
-      - next suite
-      - next room
-      - neighboring roof
-      - above
-      - below
-      - hallway
-      - hall
-      - corridor
-      - bathroom
+      - that
   - name: hotel
     keywords:
-      - hotel
-      - high $ floor
-      - building
       - area
-      - section
-      - location
-      - quiet hotel
+      - building
+      - high $ floor
+      - hotel
       - lobby
-      - patio
+      - location
       - neighborhood
+      - patio
       - pool
+      - quiet hotel
+      - section
   - name: near
     keywords:
-      - nowhere $ near
-      - near to
-      - in the heart of
-      - over
-      - outside
-      - next to
-      - on the
-      - on our
-      - being on
       - across from
-      - right on
+      - being on
+      - close to
+      - faced
+      - in the heart of
+      - near to
+      - next door
+      - next to
+      - next to
+      - nowhere $ near
+      - on our
+      - on the
+      - outside
+      - over
       - overlooked
       - overlooks
-      - close to
-      - next to
-      - next door
-      - faced
+      - right on
   - name: far
     keywords:
+      - away from
       - far
       - far from
       - farthest from
-      - away from
       - nowhere near
   - name: insul
     keywords:
-      - insulation
-      - filter
-      - isolated from
       - away from
       - deaden
-      - soundproof
+      - filter
       - glazed
       - glazing
-      - sound deadening
-      - sound proof
-      - sound prof
-      - sound insulation
       - insulate
+      - insulation
+      - isolated from
+      - sound deadening
+      - sound insulation
+      - sound prof
+      - sound proof
+      - soundproof
   - name: window
     keywords:
-      - window
       - balcony
       - balcony door
+      - window
   - name: wall
     keywords:
-      - walls
-      - my|next $ door
       - floor
+      - my|next $ door
+      - walls
   - name: open
     keywords:
       - open
-      - thin
       - paper thin
+      - thin
   - name: closed
     keywords:
       - closed
       - thick
   - name: letin
     keywords:
-      - let in
-      - still hear
-      - heard through
       - came in
-      - lets in
-      - lets * in
-      - let * in
       - came through
-      - through
-      - coming through
       - carries
+      - coming through
+      - heard through
+      - let * in
+      - let in
+      - lets * in
+      - lets in
+      - still hear
+      - through
   - name: keepout
     keywords:
-      - keep out
-      - keep * out
-      - the $ block
-      - filter
-      - cut down on
-      - far away enough
-      - far away from
-      - shut out
-      - cut out
       - block
-      - keep out
-      - kept out
+      - cut down on
+      - cut out
       - drown out
       - escape from
+      - far away enough
+      - far away from
+      - filter
+      - keep * out
+      - keep out
+      - keep out
+      - kept out
+      - shut out
+      - the $ block
   - name: tod
     keywords:
-      - am
-      - pm
-      - all night
-      - nights
-      - throughout the night
-      - early
-      - late
-      - all hours
-      - morning
-      - each morning
-      - half the night
-      - at night
-      - middle of the night
-      - every night
-      - sunday night
-      - monday night
-      - tuesday night
-      - wednesday night
-      - thursday night
-      - friday night
-      - saturday night
-      - midnight
-      - evening
       - 1 am
       - 1 pm
       - 2 am
@@ -358,187 +333,210 @@ klists:
       - 11 pm
       - 12 am
       - 12 pm
+      - all hours
+      - all night
+      - am
+      - at night
+      - each morning
+      - early
+      - evening
+      - every night
+      - friday night
+      - half the night
+      - late
+      - middle of the night
+      - midnight
+      - monday night
+      - morning
+      - nights
+      - pm
+      - saturday night
+      - sunday night
+      - throughout the night
+      - thursday night
+      - tuesday night
+      - wednesday night
   - name: relax
     keywords:
-      - undisrupted
-      - undisturb
-      - sleep
       - "rest # of"
       - exhausted
+      - sleep
+      - undisrupted
+      - undisturb
   - name: stress
     keywords:
       - "wake # up"
       - awake
-      - woke
       - awoke
+      - bother
+      - disrupt
+      - disturb
+      - sleepless
+      - stirred
       - unable to
       - unable to go back to
       - waken
+      - woke
       - woken
-      - disturb
-      - disrupt
-      - stirred
-      - bother
-      - sleepless
   # FOR FUTURE USE
   - name: other
     keywords:
-      - tourist
-      - boulangerie
-      - flight
-      - write
-      - located
-      - neighborhood
-      - feeling
-      - far
-      - looked
-      - trip
-      - deal
-      - carpet
-      - decor
+      - apart from
+      - bed
       - big
-      - inn
+      - boulangerie
+      - buffet
+      - carpet
+      - central
+      - cheap
+      - clean
+      - cost
       - days
-      - month
-      - usd
-      - sauna
-      - mention
-      - stay
+      - deal
+      - decor
+      - decorations
       - dinner
+      - far
+      - feeling
+      - flight
+      - gym
+      - inn
+      - located
+      - looked
+      - mention
+      - month
+      - neat
+      - neighborhood
+      - otherwise
+      - refurbished
+      - remodeled
+      - safe
+      - sauna
+      - seal out
+      - sheets
       - smell
       - speak
-      - cheap
-      - gym
-      - remodeled
-      - buffet
-      - decorations
-      - refurbished
-      - seal out
-      - view
-      - safe
-      - apart from
-      - otherwise
-      - central
-      - cost
-      - clean
+      - stay
       - tidy
+      - tourist
       - towel
-      - sheets
-      - bed
-      - neat
+      - trip
+      - usd
+      - view
+      - write
   - name: super
     keywords:
-      - very pleased
-      - soothing
       - a gem
-      - love
+      - amazing
+      - beautiful
+      - bliss
+      - cozy
+      - excellent
+      - fabulous
+      - fantastic
+      - gorgeous
+      - happy
+      - heaven
       - home away from home
       - homely
-      - wow
-      - wonderful
-      - bliss
-      - happy
-      - superb
-      - gorgeous
-      - spotless
       - immaculate
-      - phenomenal
-      - fantastic
-      - perfect
-      - relax
-      - excellent
-      - spectacular
-      - peaceful
-      - lovely
-      - beautiful
-      - amazing
-      - impressive
       - impressed
-      - heaven
+      - impressive
+      - love
+      - lovely
       - magical
-      - fabulous
-      - serene
-      - paradise
-      - special
-      - cozy
       - oasis
+      - paradise
+      - peaceful
+      - perfect
+      - phenomenal
+      - relax
+      - serene
+      - soothing
+      - special
+      - spectacular
+      - spotless
+      - superb
+      - very pleased
+      - wonderful
+      - wow
   - name: horrible
     keywords:
-      - unacceptable
-      - filthy
-      - dump
-      - mildew
-      - lousy
       - awful
+      - bugs
+      - disappoint
+      - disgusting
+      - dissappoint
+      - dump
+      - filthy
+      - gross
+      - hairs
       - horrible
       - horrid
-      - poison
-      - gross
       - ick
+      - lousy
+      - mildew
+      - poison
+      - spider
       - ss icky
-      - disgusting
-      - hairs
-      - yuck
+      - terrible
       - ugh
+      - unacceptable
       - unhelpful
       - unpleasant
-      - dissappoint
-      - disappoint
-      - terrible
-      - bugs
-      - spider
+      - yuck
   - name: nonresponsive
     keywords:
-      - grumpy
       - abrupt
       - aloof
-      - non responsive
+      - barely polite
       - clueless
       - did nothing
-      - nothing was done
-      - no one followed up
-      - ineffective
-      - disorganized
-      - no apology
       - disinterested
+      - disorganized
+      - grumpy
       - ignored
-      - barely polite
+      - ineffective
+      - no apology
+      - no one followed up
+      - non responsive
+      - nothing was done
       - unresponsive
   - name: responsive
     keywords:
-      - very helpful
-      - attentive
-      - taking the trouble
-      - positive
-      - apologetic
       - accomodat
-      - worked hard
+      - apologetic
+      - attentive
+      - positive
+      - taking the trouble
+      - very helpful
       - welcoming
+      - worked hard
   # OTHER LISTS FROM THE OLD NOISE APP
   - name: slowspeed
     keywords:
-      - slow
-      - we|I $ spent
       - "wait # staff"
       - "waiting # to|staff"
-      - took time
-      - took * minutes
+      - slow
       - takes time
+      - took * minutes
+      - took time
+      - we|I $ spent
   - name: fastspeed
     keywords:
-      - ready
-      - immediate
       - convenient
       - easy
-      - speedy
+      - efficient
+      - fast
+      - immediate
+      - no time
       - prompt
       - quick
       - quickly
+      - ready
       - smooth
-      - efficient
-      - fast
+      - speedy
       - within minutes
-      - no time
   - name: timeunits
     keywords:
       - "0"
@@ -551,72 +549,72 @@ klists:
       - "7"
       - "8"
       - "9"
-      - minutes
       - hour
       - mins
+      - minutes
   - name: professional
     keywords:
-      - infromative
-      - well run
-      - hard-working
-      - assist
-      - out of their way
-      - out of the way
-      - always remember
-      - helpful
-      - gracious
-      - polite
-      - sensitive
       - accommodating
-      - professional
-      - eager
-      - knowledgeable
-      - courteous
+      - accomodat
+      - always remember
+      - apologetic
+      - apologized
+      - apology
+      - assist
+      - attention
       - attentive
       - attentive to
-      - attention
-      - apology
-      - apologized
-      - apologetic
+      - bent over backwards
+      - care of
       - competent
+      - courteous
+      - eager
+      - ensure
+      - gracious
+      - hard-working
+      - helpful
+      - infromative
       - know how
-      - no problem
+      - knowledgeable
       - made sure
       - make sure
       - making sure
-      - ensure
-      - taking the trouble
-      - care of
+      - no problem
+      - out of the way
+      - out of their way
+      - polite
       - positive
-      - accomodat
+      - professional
+      - sensitive
+      - taking the trouble
+      - well run
       - worked hard
-      - bent over backwards
   - name: unprofessional
     keywords:
-      - complain
-      - exception
-      - lost a bag
-      - spotty
-      - sketchy
-      - hit or miss
-      - grumpy
+      - "forgot # her|him"
       - abrupt
       - aloof
-      - non responsive
-      - clueless
-      - no one came
-      - did nothing
-      - nothing was done
-      - ineffective
-      - disorganized
-      - no apology
-      - disinterested
-      - ignored
       - barely polite
-      - unresponsive
-      - not experienced
-      - inexperienced
-      - over enthusiastic
+      - clueless
+      - complain
+      - did nothing
+      - disinterested
+      - disorganized
+      - exception
       - failed
+      - grumpy
+      - hit or miss
+      - ignored
+      - ineffective
+      - inexperienced
+      - lost a bag
+      - no apology
+      - no one came
+      - non responsive
+      - not experienced
+      - nothing was done
+      - over enthusiastic
       - refused
-      - "forgot # her|him"
+      - sketchy
+      - spotty
+      - unresponsive
