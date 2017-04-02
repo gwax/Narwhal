@@ -21,16 +21,26 @@ import noise_tree as nt
 def app():
     """Create a new narwhal app."""
     nwv = nt.nwvars()
+
+    # problem_/noise
     nar_problem = nwt.attribute(nwv['problem'], nwv['sound'])
+
+    # sound_/intensity_/source_/timeOfDay ::[me_/affect]
     nar_sound = nwt.attribute(
         nwt.attribute(
             nwt.attribute(nwv['sound'], nwv['source']),
             nwv['intensity']),
         nwv['tod'])
+
+    # [sound->me] :: me_/affect
     nar_affect = nwt.cause(
         nwt.attribute(nwv['sound'], [nwv['tod']]),
         nwv['affect'])
+
+    # location _nearfar_/ source
     nar_prox = nwt.attribute(nwv['loc'], nwv['source'], nwv['prox'])
+
+    # (barrier_/state)-letInOut->sound
     nar_letin = nwt.event(
         nwt.attribute(nwv['barrier'], [nwv['state']]),
         nwv['sound'],
