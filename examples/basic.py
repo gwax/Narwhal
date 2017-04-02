@@ -24,26 +24,9 @@ from narwhal import nwtypes as nwt
 from narwhal import nwapp as nwa
 
 KW_FOOD = 'cheese,cilantro'
-VAR_FOOD = nwt.KList('food', KW_FOOD).var()
-
 KW_SAD = 'sad,unhappy,angry'
 KW_HAPPY = 'gleeful,not $ happy'
-VAR_SAD = nwt.KList('sad', KW_SAD).var()
-VAR_HAPPY = nwt.KList('happy', KW_HAPPY).var()
-VAR_AFFECT = VAR_SAD | VAR_HAPPY
-
 KW_EXPERIENCE = 'experience,we found,I found,we did find'
-VAR_EXPERIENCE = nwt.KList('experience', KW_EXPERIENCE).var()
-VAR_EXPERIENCE.sub(VAR_FOOD)
-VAR_EXPERIENCE.sub(VAR_AFFECT)
-
-NAR_EATING = nwt.cause(VAR_FOOD, VAR_AFFECT)
-
-NARS = [NAR_EATING]
-CALIBS = [True]
-THRESHOLDS = [0.6]
-
-APP_FOOD = nwa.NWApp(VAR_EXPERIENCE, NARS, CALIBS, THRESHOLDS)
 
 SENTENCES = [
     'Cheese makes me happy.',
@@ -51,12 +34,31 @@ SENTENCES = [
 ]
 
 
+def app():
+    """Create a new narwhal app."""
+    var_food = nwt.KList('foo', KW_FOOD).var()
+    var_sad = nwt.KList('sad', KW_SAD).var()
+    var_happy = nwt.KList('happy', KW_HAPPY).var()
+
+    var_affect = var_sad | var_happy
+    var_experience = nwt.KList('experience', KW_EXPERIENCE).var()
+    var_experience.sub(var_food)
+    var_experience.sub(var_affect)
+
+    nar_eating = nwt.cause(var_food, var_affect)
+    nars_calibs_thresholds = [
+        (nar_eating, True, 0.6),
+    ]
+    return nwa.NWApp(var_experience, *zip(*nars_calibs_thresholds))
+
+
 def main():
     """Run the model against some sentences."""
     for sentence in SENTENCES:
+        app_food = app()
         print('Sentence: ' + sentence)
-        APP_FOOD.readText(sentence)
-        report = APP_FOOD.report(sentence)
+        app_food.readText(sentence)
+        report = app_food.report(sentence)
         print(report)
 
 
