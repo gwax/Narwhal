@@ -185,69 +185,89 @@ timeofdayD = KList("tod", kTIMEOFDAY)
 relaxD = KList("relax", kSLEEPPOSITIVES)
 stressD = KList("stress", kSLEEPNEGATIVES)
 
+kLOC = ""
+locD = KList("loc", kLOC)
+
 ############################################################################
 ############################################################################
 ############################################################################
 
-#-----------define the VARs from the KeyLists
-EXPERIENCE = experienceD.var()
-PROBLEM = problemD.var()
-SOUND = soundD.var()
 
-NOISE = noiseD.var() | quietD.var()
+def nwvars():
+    """Construct a stateful mapping of narwhal vars for the noise tree."""
+    experience = experienceD.var()
+    problem = problemD.var()
+    sound = soundD.var()
+    loc = locD.var()
 
-INTENSITY = loudD.var() | softD.var()
+    noise = noiseD.var() | quietD.var()
 
+    intensity = loudD.var() | softD.var()
 
-SOURCE = nsourceD.var() | qsourceD.var()
+    source = nsourceD.var() | qsourceD.var()
 
-#SOURCE = (peopleD.var() + partyD.var() + equipmentD.var()+ trafficD.var() + constructionD.var()) | oasisD.var()
+    # source = (peopleD.var() + partyD.var() + equipmentD.var()+ trafficD.var() + constructionD.var()) | oasisD.var()
 
+    room = roomD.var()
+    hotel = hotelD.var()
 
-LOC = KList("loc", "").var()  # VAR()
-ROOM = roomD.var()
-HOTEL = hotelD.var()
+    prox = nearD.var() | farD.var()  # typically an adjective val
+    insulation = insulationD.var()
+    barrier = windowD.var() + wallD.var()
+    state = openD.var() | closedD.var()
+    letinout = letinD.var() | keepoutD.var()  # typically a verb
+    tod = timeofdayD .var()
+    affect = stressD.var() | relaxD.var()
 
-PROX = nearD.var() | farD.var()  # typically an adjective val
-INSULATION = insulationD.var()
-BARRIER = windowD.var() + wallD.var()
-STATE = openD.var() | closedD.var()
-LETINOUT = letinD.var() | keepoutD.var()  # typically a verb
-TOD = timeofdayD .var()
-AFFECT = stressD.var() | relaxD.var()
+    # --------------define the tree built from these VARs
+    experience.sub(problem)
+    experience.sub(sound)
+    experience.sub(loc)
+    experience.sub(prox)
+    experience.sub(insulation)
+    experience.sub(tod)
+    experience.sub(affect)
 
-#--------------define the tree built from these VARs
-EXPERIENCE.sub(PROBLEM)
-EXPERIENCE.sub(SOUND)
-EXPERIENCE.sub(LOC)
-EXPERIENCE.sub(PROX)
-EXPERIENCE.sub(INSULATION)
-EXPERIENCE.sub(TOD)
-EXPERIENCE.sub(AFFECT)
+    # PROBLEM
+    #
+    sound.sub(noise)
+    sound.sub(intensity)
+    sound.sub(source)
+    #
+    loc.sub(room)
+    loc.sub(hotel)
+    # LOC.sub(PROX) moved up
+    #
+    insulation.sub(barrier)
+    insulation.sub(state)
+    insulation.sub(letinout)
+    #
+    # TOD - no children
+    #
+    # AFFECT - no children
 
-# PROBLEM
-#
-SOUND.sub(NOISE)
-SOUND.sub(INTENSITY)
-SOUND.sub(SOURCE)
-#
-LOC.sub(ROOM)
-LOC.sub(HOTEL)
-# LOC.sub(PROX) moved up
-#
-INSULATION.sub(BARRIER)
-INSULATION.sub(STATE)
-INSULATION.sub(LETINOUT)
-#
-# TOD - no children
-#
-# AFFECT - no children
-
-
-# Some NARs
-#                       sound->me :: me_/affect
-#                       sound_/intensity_/source_/timeOfDay (use implicits)
-#                       problem_/sound
-#                       (barrier_/state)-letInOut->sound
-#                       location _nearfar_/ source
-#                       X_/Y :: sound
+    # Some NARs
+    #                       sound->me :: me_/affect
+    #                       sound_/intensity_/source_/timeOfDay (use implicits)
+    #                       problem_/sound
+    #                       (barrier_/state)-letInOut->sound
+    #                       location _nearfar_/ source
+    #                       X_/Y :: sound
+    return {
+        'affect': affect,
+        'barrier': barrier,
+        'experience': experience,
+        'hotel': hotel,
+        'insulation': insulation,
+        'intensity': intensity,
+        'letinout': letinout,
+        'loc': loc,
+        'noise': noise,
+        'problem': problem,
+        'prox': prox,
+        'room': room,
+        'sound': sound,
+        'source': source,
+        'state': state,
+        'tod': tod,
+    }

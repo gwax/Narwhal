@@ -17,31 +17,34 @@ from narwhal import nwapp as nwa
 
 import noise_tree as nt
 
-PROBLEM = nwt.attribute(nt.PROBLEM, nt.SOUND)
-SOUND = nwt.attribute(
-    nwt.attribute(
-        nwt.attribute(nt.SOUND, nt.SOURCE),
-        nt.INTENSITY),
-    nt.TOD)
-AFFECT = nwt.cause(
-    nwt.attribute(nt.SOUND, [nt.TOD]),
-    nt.AFFECT)
-PROXIMITY = nwt.attribute(nt.LOC, nt.SOURCE, nt.PROX)
-LETIN = nwt.event(
-    nwt.attribute(nt.BARRIER, [nt.STATE]),
-    nt.SOUND,
-    nt.LETINOUT)
 
-NARS_CALIBS_THRESHOLDS = [
-    (PROBLEM, True, 0.6),
-    (SOUND, True, 0.6),
-    (AFFECT, True, 0.6),
-    (PROXIMITY, True, 0.6),
-    (LETIN, True, 0.6),
-]
-NARS, CALIBS, THRESHOLDS = zip(*NARS_CALIBS_THRESHOLDS)
+def app():
+    """Create a new narwhal app."""
+    nwv = nt.nwvars()
+    nar_problem = nwt.attribute(nwv['problem'], nwv['sound'])
+    nar_sound = nwt.attribute(
+        nwt.attribute(
+            nwt.attribute(nwv['sound'], nwv['source']),
+            nwv['intensity']),
+        nwv['tod'])
+    nar_affect = nwt.cause(
+        nwt.attribute(nwv['sound'], [nwv['tod']]),
+        nwv['affect'])
+    nar_prox = nwt.attribute(nwv['loc'], nwv['source'], nwv['prox'])
+    nar_letin = nwt.event(
+        nwt.attribute(nwv['barrier'], [nwv['state']]),
+        nwv['sound'],
+        nwv['letinout'])
 
-APP_NOISE = nwa.NWApp(nt.EXPERIENCE, NARS, CALIBS, THRESHOLDS)
+    nars_calibs_thresholds = [
+        (nar_problem, True, 0.6),
+        (nar_sound, True, 0.6),
+        (nar_affect, True, 0.6),
+        (nar_prox, True, 0.6),
+        (nar_letin, True, 0.6),
+    ]
+    return nwa.NWApp(nwv['experience'], *zip(*nars_calibs_thresholds))
+
 
 SENTENCES = [
     'word spoken was heard through the walls',
@@ -55,9 +58,10 @@ SENTENCES = [
 def main():
     """Run the model against some sentences."""
     for sentence in SENTENCES:
+        app_noise = app()
         print('Sentence: ' + sentence)
-        APP_NOISE.readText(sentence)
-        report = APP_NOISE.report(sentence)
+        app_noise.readText(sentence)
+        report = app_noise.report(sentence)
         print(report)
 
 
